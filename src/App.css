@@ -9,11 +9,12 @@ body {
 }
 .yellow {
   color: var(--text-yellow);
-  text-shadow: 0 0 1px #fff;
 }
 .green {
   color: var(--text-green);
-  text-shadow: 0 0 1px #fff;
+}
+section {
+  padding-top: 50px;
 }
 .homeContent {
   display: grid;
@@ -28,20 +29,37 @@ a {
 ul {
   list-style: none;
 }
-li {
-  display: flex;
-  align-items: center;
+.menu li {
+  margin: 0 10px;
 }
-.listStates li .card {
+.card {
   font-size: 1rem;
-  margin: 10px;
-  flex: 1;
-  flex-direction: column;
+  margin: 5px;
   min-width: 250px;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   box-sizing: border-box;
+  animation: anima 1s forwards;
+}
+.countryContainer .card {
+  flex-direction: row;
+}
+.countryContainer .card .cardTop {
+  font-size: 3rem;
+  border-bottom: none;
+  padding-bottom: 0;
+  display: flex;
+  justify-content: center;
+}
+.countryContainer .card .cardTop img {
+  width: 100px;
+}
+.countryContainer .card .cardBottom {
+  font-size: 1.5rem;
+  border-left: 1px solid #fff;
+  padding-left: 10px;
 }
 .cardTop img {
   margin-right: 10px;
@@ -49,4 +67,19 @@ li {
 }
 .cardTop h3 {
   margin: 0;
+}
+.cardBottom::nth-child(1) {
+  margin: 10px;
+}
+
+@keyframes anima {
+  from {
+    transform: translate3d(0, -30px, 0);
+    opacity: 0;
+  }
+
+  to {
+    transform: translate3d(0, 0, 0);
+    opacity: 1;
+  }
 }

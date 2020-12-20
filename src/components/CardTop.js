@@ -7,6 +7,9 @@ const Div = styled.div`
   height: 20%;
   display: flex;
   align-items: center;
+  border-bottom: 1px solid #fff;
+  padding-bottom: 5px;
+  box-sizing: border-box;
 `;
 
 const CardTop = ({ ...props }) => {

@@ -1,16 +1,19 @@
 import React from "react";
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
 
 const MenuItem = styled.li`
-  margin: 0 1rem;
   font-size: 1.5rem;
+  box-sizing: border-box;
 
   a {
-    color: ${(props) => (props.active ? "palevioletred" : "white")};
+    color: white;
 
     &:hover {
-      text-shadow: ${(props) => (props.hover = "0 0 5px palevioletred")};
+      text-shadow: ${(props) => (props.hover = "0 0 5px var(--text-yellow)")};
     }
+  }
+  a.active {
+    color: var(--text-green);
   }
 `;
 

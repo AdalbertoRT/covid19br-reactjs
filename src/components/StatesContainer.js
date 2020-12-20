@@ -6,6 +6,7 @@ const Div = styled.div`
   width: 100%;
   padding: 10px;
   grid-column: 2 / 6;
+  box-sizing: border-box;
 `;
 
 const StatesContainer = ({ ...props }) => {

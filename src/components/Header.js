@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import styled from "styled-components";
 import List from "./List";
 import ListItem from "./ListItem";
@@ -7,11 +7,13 @@ import ListItem from "./ListItem";
 const Cabecalho = styled.header`
   width: 100%;
   height: 50px;
-  background-color: rgba(255, 255, 255, 0.3);
+  background-color: #5a5a5a;
   justify-content: center;
   display: grid;
   grid-template-columns: repeat(2, 1fr) repeat(2, 3fr) repeat(2, 1fr);
   align-items: center;
+  position: fixed;
+  z-index: 90;
 `;
 
 const Brand = styled.div`
@@ -36,19 +38,21 @@ function Header() {
           <span className={"yellow"}>R</span>
         </Link>
       </Brand>
-      <Nav>
+      <Nav className={"menu"}>
         <List display="flex">
-          <ListItem active>
-            <Link to="/">Início</Link>
+          <ListItem>
+            <NavLink to="/" end>
+              Início
+            </NavLink>
           </ListItem>
           <ListItem>
-            <Link to="/coronavirus">Sobre o Coronavírus</Link>
+            <NavLink to="/coronavirus">Coronavírus</NavLink>
           </ListItem>
           <ListItem>
-            <Link to="/noticias">Últimas Notícias</Link>
+            <NavLink to="/noticias">Notícias</NavLink>
           </ListItem>
           <ListItem>
-            <Link to="/sobre">Sobre</Link>
+            <NavLink to="/sobre">Sobre</NavLink>
           </ListItem>
         </List>
       </Nav>

@@ -3,10 +3,10 @@ import styled from "styled-components";
 
 const Div = styled.div`
   flex: 1;
-  min-width: 150px;
+  min-width: 250px;
   border: 1px solid #fff;
   border-radius: 10px;
-  padding: 5px;
+  padding: 10px;
 `;
 
 const Card = ({ ...props }) => {

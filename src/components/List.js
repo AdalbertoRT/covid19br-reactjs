@@ -5,6 +5,7 @@ const Menu = styled.ul`
   display: ${(props) => props.display || "block"};
   flex-direction: ${(props) => props.flexDirection || "row"};
   flex-wrap: ${(props) => props.flexWrap || "wrap"};
+  justify-content: space-between;
   align-items: center;
   list-style: none;
   margin: 0;
