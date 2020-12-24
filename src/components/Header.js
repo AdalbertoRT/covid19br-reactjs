@@ -10,7 +10,8 @@ const Cabecalho = styled.header`
   background-color: #5a5a5a;
   justify-content: center;
   display: grid;
-  grid-template-columns: repeat(2, 1fr) repeat(2, 3fr) repeat(2, 1fr);
+  grid-template-columns: repeat(2, 1fr) repeat(3, 3fr) repeat(2, 1fr);
+  grid-gap: 5px;
   align-items: center;
   position: fixed;
   z-index: 90;
@@ -25,7 +26,7 @@ const Brand = styled.div`
 `;
 
 const Nav = styled.nav`
-  grid-column: 3 / 6;
+  grid-column: 4 / 7;
   justify-self: flex-end;
 `;
 

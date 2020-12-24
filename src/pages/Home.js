@@ -8,6 +8,7 @@ import CardTop from "../components/CardTop";
 import CardBottom from "../components/CardBottom";
 import Brasil from "../images/brazil.png";
 import CountryContainer from "../components/CountryContainer";
+import News from "./News";
 
 const Home = () => {
   const [data, setData] = React.useState(null);
@@ -188,43 +189,45 @@ const Home = () => {
     );
   });
   return (
-    <section className={"homeContent"}>
-      <CountryContainer className={"countryContainer"}>
-        <Card>
-          <CardTop>
-            <Image src={Brasil} alt={"Brasil"} />
-            <h3>Brasil</h3>
-          </CardTop>
-          <CardBottom>
-            <p className={"atualizacao"}>
-              <span>Atualização:</span>
-              <span>{lastUpdateBR}</span>
-            </p>
-            <p>
-              <span>Total de Casos: </span>
-              <span>{dataBrazil.cases}</span>
-            </p>
-            <p>
-              <span>Total de Mortes: </span>
-              <span>{dataBrazil.deaths}</span>
-            </p>
-            <p>
-              <span>Total de Casos Confirmados: </span>
-              <span>{dataBrazil.confirmed}</span>
-            </p>
-            <p>
-              <span>Total de Recuperados: </span>
-              <span>{dataBrazil.recovered}</span>
-            </p>
-          </CardBottom>
-        </Card>
-      </CountryContainer>
+    <section className={"home"}>
+      <main className={"homeContent"}>
+        <CountryContainer className={"countryContainer"}>
+          <Card>
+            <CardTop>
+              <Image src={Brasil} alt={"Brasil"} />
+              <h3>Brasil</h3>
+            </CardTop>
+            <CardBottom>
+              <p className={"atualizacao"}>
+                <span>Atualização:</span>
+                <span>{lastUpdateBR}</span>
+              </p>
+              <p>
+                <span>Total de Casos: </span>
+                <span>{dataBrazil.cases}</span>
+              </p>
+              <p>
+                <span>Total de Mortes: </span>
+                <span>{dataBrazil.deaths}</span>
+              </p>
+              <p>
+                <span>Total de Casos Confirmados: </span>
+                <span>{dataBrazil.confirmed}</span>
+              </p>
+              <p>
+                <span>Total de Recuperados: </span>
+                <span>{dataBrazil.recovered}</span>
+              </p>
+            </CardBottom>
+          </Card>
+        </CountryContainer>
 
-      <StatesContainer>
-        <List className={"listStates"} display={"flex"}>
-          {listStates}
-        </List>
-      </StatesContainer>
+        <StatesContainer>
+          <List className={"listStates"} display={"flex"}>
+            {listStates}
+          </List>
+        </StatesContainer>
+      </main>
     </section>
   );
 };
