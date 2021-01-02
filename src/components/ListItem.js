@@ -1,7 +1,7 @@
 import React from "react";
 import styled, { keyframes } from "styled-components";
 
-const MenuItem = styled.li`
+const Li = styled.li`
   font-size: 1.5rem;
   box-sizing: border-box;
 
@@ -18,7 +18,7 @@ const MenuItem = styled.li`
 `;
 
 const ListItem = ({ ...props }) => {
-  return <MenuItem {...props}></MenuItem>;
+  return <Li {...props}></Li>;
 };
 
 export default ListItem;

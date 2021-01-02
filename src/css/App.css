@@ -1,0 +1,124 @@
+body {
+  padding: 0;
+  margin: 0;
+  background-color: #000;
+  color: #fff;
+
+  --text-yellow: rgb(255, 255, 0);
+  --text-green: rgb(18, 230, 18);
+}
+.yellow {
+  color: var(--text-yellow);
+}
+.green {
+  color: var(--text-green);
+}
+/* section {
+  padding-top: 50px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr) repeat(3, 3fr) repeat(2, 1fr);
+  grid-gap: 5px;
+  justify-content: center;
+  width: 100vw;
+  box-sizing: border-box;
+} */
+/* .home {
+  grid-column: 2 / 7;
+  display: grid;
+}
+.homeContent {
+  position: relative;
+  grid-column: 2 / 7;
+}
+aside {
+  position: relative;
+  grid-column: 1 / 6;
+} */
+/* .news a {
+  color: var(--text-green) !important;
+}
+.news img {
+  width: 100%;
+}
+.news ul {
+  grid-column: 2/7;
+}
+.news .carbottom {
+  display: flex;
+}
+.news .cardBottom .media_box {
+  width: 50%;
+}
+.news .cardBottom .media_box .content_image {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.news .cardBottom .media_box .content_image .legend_box {
+  font-size: 1.2rem;
+}
+.news .cardBottom .media_box .content_image:nth-child(2) {
+  font-size: 0.8rem;
+} */
+
+a {
+  text-decoration: none;
+  color: #fff;
+}
+ul {
+  list-style: none;
+}
+/* .menu li {
+  margin: 0 10px;
+} */
+/* .card {
+  font-size: 1rem;
+  margin: 5px;
+  min-width: 250px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  animation: anima 1s forwards;
+}
+.countryContainer .card {
+  flex-direction: row;
+}
+.countryContainer .card .cardTop {
+  font-size: 3rem;
+  border-bottom: none;
+  padding-bottom: 0;
+  display: flex;
+  justify-content: center;
+}
+.countryContainer .card .cardTop img {
+  width: 100px;
+}
+.countryContainer .card .cardBottom {
+  font-size: 1.5rem;
+  border-left: 1px solid #fff;
+  padding-left: 10px;
+}
+.cardTop img {
+  margin-right: 10px;
+  width: 50px;
+}
+.cardTop h3 {
+  margin: 0;
+}
+.cardBottom::nth-child(1) {
+  margin: 10px;
+} */
+
+@keyframes anima {
+  from {
+    transform: translate3d(0, -30px, 0);
+    opacity: 0;
+  }
+
+  to {
+    transform: translate3d(0, 0, 0);
+    opacity: 1;
+  }
+}

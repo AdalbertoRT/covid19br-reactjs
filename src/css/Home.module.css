@@ -1,0 +1,51 @@
+.home {
+  display: grid;
+  grid-template-columns: 1fr 7fr 3fr 1fr;
+  gap: 5px;
+  padding-top: 50px;
+}
+.homeMain {
+  grid-column: 2 / 4;
+  padding: 10px 0;
+}
+.homeAside {
+  grid-column: 2 / 4;
+  padding: 10px 0;
+}
+.cardTop img {
+  width: 100px;
+}
+.cardTop h3 {
+  font-size: 2.5rem;
+  margin: 0;
+  margin-left: 10px;
+}
+.cardBottom {
+  font-size: 1.5rem;
+}
+.listStates .cardTop img {
+  width: 40px;
+}
+.listStates .cardTop h3 {
+  font-size: 1.3rem;
+}
+.btnLatestNews {
+  width: 100%;
+  background-color: var(--text-green);
+  padding: 5px;
+  font-size: 1rem;
+  border-radius: 10px;
+}
+.btnLatestNews a {
+  color: blue;
+  font-weight: bold;
+}
+
+@media only screen and (min-width: 600px) {
+  .homeMain {
+    grid-column: 2 / 3;
+  }
+  .homeAside {
+    grid-column: 3 / 4;
+  }
+}
