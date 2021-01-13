@@ -1,16 +1,16 @@
 import React from "react";
 import styled from "styled-components";
-import styles from "../css/Home.module.css";
 
 const Div = styled.div`
   position: relative;
-  width: 100%;
+  max-height: 100%;
   box-sizing: border-box;
   padding: 0;
+  transition: all 0.3s linear;
 `;
 
 const StatesContainer = ({ ...props }) => {
-  return <Div {...props} className={styles.statesContainer}></Div>;
+  return <Div {...props} className="statesContainer"></Div>;
 };
 
 export default StatesContainer;

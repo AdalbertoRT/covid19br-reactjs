@@ -14,6 +14,7 @@ const Cabecalho = styled.div`
 
 const Hamburger = () => {
   function handleMenu({ target }) {
+    console.log(target);
     target.classList.toggle(styles.rotate);
     document.querySelector(".menuMobile").classList.toggle(styles.active);
   }
@@ -34,6 +35,10 @@ const Brand = styled.div`
 `;
 
 function Header() {
+  function offMenu() {
+    document.querySelector(".iconMenu").classList.toggle(styles.rotate);
+    document.querySelector(".menuMobile").classList.toggle(styles.active);
+  }
   return (
     <header className={styles.header}>
       <Cabecalho className={styles.cabecalho}>
@@ -44,7 +49,7 @@ function Header() {
           </Link>
         </Brand>
         <Hamburger />
-        <MenuMobile />
+        <MenuMobile onclick={offMenu} />
         <Menu />
       </Cabecalho>
     </header>

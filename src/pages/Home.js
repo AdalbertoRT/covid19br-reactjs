@@ -6,7 +6,7 @@ import { DataContext } from "../DataContext";
 import styles from "../css/Home.module.css";
 import Country from "../components/Country";
 import States from "../components/States";
-import { Link } from "react-router-dom";
+import Title from "../components/Title";
 
 const Home = () => {
   const dataContext = React.useContext(DataContext);
@@ -19,18 +19,19 @@ const Home = () => {
   return (
     <section className={styles.home}>
       <main className={styles.homeMain}>
-        <CountryContainer className={"countryContainer"}>
-          <Country />
-        </CountryContainer>
+        <Title text="Covid-19 Brasil" rotate="rotate" id="covidBR" />
+        <div className={`${styles.mainContent + " mainContent"}`}>
+          <CountryContainer>
+            <Country className={styles.country} />
+          </CountryContainer>
 
-        <StatesContainer>
-          <States />
-        </StatesContainer>
+          <StatesContainer className={"statesContainer"}>
+            <States className={styles.states} />
+          </StatesContainer>
+        </div>
       </main>
       <aside className={styles.homeAside}>
-        <button className={styles.btnLatestNews}>
-          <Link to="/noticias">Últimas Notícias</Link>
-        </button>
+        <Title text="Últimas Notícias" id="latestNews" />
       </aside>
     </section>
   );

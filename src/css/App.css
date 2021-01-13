@@ -13,6 +13,17 @@ body {
 .green {
   color: var(--text-green);
 }
+.hide {
+  height: 0 !important;
+  min-height: 0 !important;
+  transition: all 0.3s;
+}
+.off {
+  max-height: 0;
+  overflow: hidden;
+  transition: all 0.3s linear;
+}
+
 /* section {
   padding-top: 50px;
   display: grid;

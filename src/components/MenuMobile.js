@@ -10,23 +10,29 @@ import ListItem from "./ListItem";
 //   grid-column: 2/3;
 // `;
 
-const MenuMobile = () => {
+const MenuMobile = ({ onclick }) => {
   return (
     <div className={`${styles.menuMobile + " menuMobile"}`}>
       <List className={`${styles.listMobile + " listMobile"}`}>
         <ListItem>
-          <NavLink to="/" end>
+          <NavLink to="/" end onClick={onclick}>
             Início
           </NavLink>
         </ListItem>
         <ListItem>
-          <NavLink to="/coronavirus">Coronavírus</NavLink>
+          <NavLink to="/coronavirus" onClick={onclick}>
+            Coronavírus
+          </NavLink>
         </ListItem>
         <ListItem>
-          <NavLink to="/noticias">Notícias</NavLink>
+          <NavLink to="/noticias" onClick={onclick}>
+            Notícias
+          </NavLink>
         </ListItem>
         <ListItem>
-          <NavLink to="/sobre">Sobre</NavLink>
+          <NavLink to="/sobre" onClick={onclick}>
+            Sobre
+          </NavLink>
         </ListItem>
       </List>
     </div>
