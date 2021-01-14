@@ -24,11 +24,11 @@ const MenuMobile = ({ onclick }) => {
             Coronavírus
           </NavLink>
         </ListItem>
-        <ListItem>
+        {/* <ListItem>
           <NavLink to="/noticias" onClick={onclick}>
             Notícias
           </NavLink>
-        </ListItem>
+        </ListItem> */}
         <ListItem>
           <NavLink to="/sobre" onClick={onclick}>
             Sobre

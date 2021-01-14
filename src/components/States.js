@@ -17,36 +17,38 @@ const States = () => {
     return (
       <ListItem key={item.uid}>
         <Card key={item.uid} className={styles.card}>
-          <CardTop className={styles.cardTop}>
-            <Image
-              src={`https://devarthurribeiro.github.io/covid19-brazil-api/static/flags/${item.uf}.png`}
-              alt={item.uf}
-              key={item.uid}
-            />
-            <h3>{item.state}</h3>
-          </CardTop>
-          <CardBottom className={styles.cardBottom}>
-            <p className={"atualizacao"}>
-              <span>Atualização:</span>
-              <span>{dataContext.ufUpdate}</span>
-            </p>
-            <p>
-              <span>Casos:</span>
-              <span>{item.cases}</span>
-            </p>
-            <p>
-              <span>Mortes:</span>
-              <span>{item.deaths}</span>
-            </p>
-            <p>
-              <span>Suspeitos:</span>
-              <span>{item.suspects}</span>
-            </p>
-            <p>
-              <span>Descartados:</span>
-              <span>{item.refuses}</span>
-            </p>
-          </CardBottom>
+          <div className={styles.cardContent}>
+            <CardTop className={styles.cardTop}>
+              <Image
+                src={`https://devarthurribeiro.github.io/covid19-brazil-api/static/flags/${item.uf}.png`}
+                alt={item.uf}
+                key={item.uid}
+              />
+              <h3>{item.state}</h3>
+            </CardTop>
+            <CardBottom className={styles.cardBottom}>
+              <p className={"atualizacao"}>
+                <span>Atualização:</span>
+                <span>{dataContext.ufUpdate}</span>
+              </p>
+              <p>
+                <span>Casos:</span>
+                <span>{item.cases}</span>
+              </p>
+              <p>
+                <span>Mortes:</span>
+                <span>{item.deaths}</span>
+              </p>
+              <p>
+                <span>Suspeitos:</span>
+                <span>{item.suspects}</span>
+              </p>
+              <p>
+                <span>Descartados:</span>
+                <span>{item.refuses}</span>
+              </p>
+            </CardBottom>
+          </div>
         </Card>
       </ListItem>
     );

@@ -16,9 +16,9 @@ const Menu = () => {
         <ListItem>
           <NavLink to="/coronavirus">Coronavírus</NavLink>
         </ListItem>
-        <ListItem>
+        {/* <ListItem>
           <NavLink to="/noticias">Notícias</NavLink>
-        </ListItem>
+        </ListItem> */}
         <ListItem>
           <NavLink to="/sobre">Sobre</NavLink>
         </ListItem>

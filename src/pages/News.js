@@ -14,20 +14,18 @@ import StatesContainer from "../components/StatesContainer";
 const News = () => {
   const [news, setNews] = React.useState(null);
   const [newsBig, setNewsBig] = React.useState(null);
-  const data = React.useContext(DataContext);
+  // const data = React.useContext(DataContext);
 
   React.useEffect(() => {
-    const feed = window.localStorage.getItem("feed");
-    if (feed) {
-      const data = JSON.parse(feed);
+    // const feed = window.localStorage.getItem("feed");
+    // if (feed) {
+    // const data = JSON.parse(feed);
 
-      setNews(data);
-      setNewsBig(data[Math.floor(Math.random() * data.length)]);
-      // console.log(data);
-      // console.log(data.length);
-    } else {
-      rss();
-    }
+    // setNews(data);
+    // setNewsBig(data[Math.floor(Math.random() * data.length)]);
+    // console.log(data);
+    // console.log(data.length);
+    rss();
   }, []);
 
   async function rss() {
@@ -49,7 +47,7 @@ const News = () => {
       res.feed.entry[Math.floor(Math.random() * res.feed.entry.length)]
     );
 
-    window.localStorage.setItem("feed", JSON.stringify(res.feed.entry));
+    // window.localStorage.setItem("feed", JSON.stringify(res.feed.entry));
     // console.log(typeof res);
     // console.log(res.feed.entry);
   }

@@ -1,16 +1,23 @@
 .header {
   width: 100vw;
   height: 50px;
-  background-color: #5a5a5a;
+  background-color: rgb(3, 10, 77);
   display: grid;
   grid-template-columns: 1fr 10fr 1fr;
   position: fixed;
   z-index: 90;
 }
+.header li,
+.header a {
+  border: 0;
+}
 .cabecalho {
   grid-column: 2 / 3;
   display: flex;
   justify-content: space-between;
+}
+.cabecalho a {
+  color: #fff;
 }
 .iconContainer {
   position: absolute;

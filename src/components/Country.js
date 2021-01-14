@@ -14,28 +14,30 @@ const Country = () => {
 
   return (
     <Card className={styles.card}>
-      <CardTop className={styles.cardTop}>
-        <Image src={Brasil} alt={"Brasil"} />
-        <h3>Brasil</h3>
-      </CardTop>
-      <CardBottom className={styles.cardBottom}>
-        <p className={"atualizacao"}>
-          <span>Atualização:</span>
-          <span>{country.brUpdate}</span>
-        </p>
-        <p>
-          <span>Casos: </span>
-          <span>{country.brazil.confirmed}</span>
-        </p>
-        <p>
-          <span>Mortes: </span>
-          <span>{country.brazil.deaths}</span>
-        </p>
-        <p>
-          <span>Recuperados: </span>
-          <span>{country.brazil.recovered}</span>
-        </p>
-      </CardBottom>
+      <div className={styles.cardContent}>
+        <CardTop className={styles.cardTop}>
+          <Image src={Brasil} alt={"Brasil"} />
+          <h3>Brasil</h3>
+        </CardTop>
+        <CardBottom className={styles.cardBottom}>
+          <p className={"atualizacao"}>
+            <span>Atualização:</span>
+            <span>{country.brUpdate}</span>
+          </p>
+          <p>
+            <span>Casos: </span>
+            <span>{country.brazil.confirmed}</span>
+          </p>
+          <p>
+            <span>Mortes: </span>
+            <span>{country.brazil.deaths}</span>
+          </p>
+          <p>
+            <span>Recuperados: </span>
+            <span>{country.brazil.recovered}</span>
+          </p>
+        </CardBottom>
+      </div>
     </Card>
   );
 };

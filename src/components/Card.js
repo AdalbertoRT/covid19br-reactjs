@@ -6,7 +6,7 @@ const Div = styled.div`
   border: 2px solid #fff;
   border-radius: 10px;
   box-sizing: border-box;
-  padding: 10px;
+  ${"" /* padding: 10px; */}
   margin: 5px 0;
 `;
 

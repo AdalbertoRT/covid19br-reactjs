@@ -6,12 +6,13 @@ const Titles = styled.div`
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  background-image: linear-gradient(to left, #fff, transparent 90%);
+  background-image: linear-gradient(to left, yellow, transparent 90%);
   background-size: 100%;
   background-repeat: no-repeat;
   font-weight: bold;
   box-sizing: border-box;
   text-transform: uppercase;
+  margin: 10px 0 20px 0;
 
   .seta {
     text-align: right;
