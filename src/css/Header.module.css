@@ -3,7 +3,8 @@
   height: 50px;
   background-color: rgb(3, 10, 77);
   display: grid;
-  grid-template-columns: 1fr 10fr 1fr;
+  grid-template-columns: repeat(16, 1fr);
+  gap: 20px;
   position: fixed;
   z-index: 90;
 }
@@ -12,7 +13,7 @@
   border: 0;
 }
 .cabecalho {
-  grid-column: 2 / 3;
+  grid-column: 3 / 15;
   display: flex;
   justify-content: space-between;
 }

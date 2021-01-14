@@ -1,12 +1,12 @@
 .home {
   display: grid;
-  grid-template-columns: 1fr 7fr 3fr 1fr;
+  grid-template-columns: repeat(16, 1fr);
   gap: 20px;
   padding-top: 50px;
 }
 .homeMain,
 .homeAside {
-  grid-column: 2 / 4;
+  grid-column: 3 / 15;
   padding: 0;
   padding-top: 10px;
   box-sizing: border-box;
@@ -63,9 +63,13 @@ aside .card {
 aside .listNews {
   color: #fff;
 }
-aside .card div a {
+aside .card div {
   position: relative;
   display: inline-block;
+  width: 100%;
+  height: 100%;
+}
+aside .card div a {
   width: 100%;
   height: 100%;
 }
@@ -82,9 +86,9 @@ aside .card div a h3 {
 }
 @media only screen and (min-width: 600px) {
   .homeMain {
-    grid-column: 2 / 3;
+    grid-column: 3 / 11;
   }
   .homeAside {
-    grid-column: 3 / 4;
+    grid-column: 11 / 15;
   }
 }
